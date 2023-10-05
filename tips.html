@@ -49,6 +49,38 @@ function tips (){
     out.innerHTML = "Tips are:"+myOutput
 }
 </script>
+<hr>
+<form>
+    <input type="radio" id="sum" name="op" value="sum" onclick="chooseOp()">
+    <label for="sum">Sum</label></br>
+  
+    <input type="radio" id="diff" name="op" value="difference" onclick="chooseOp()">
+    <label for="diff">diff</label></br>
+  
+    <input type="radio" id="mult" name="op" value="product" onclick="chooseOp()">
+    <label for="mult">mult</label></br>
 
+</form>
+<br>
+<p id="aop">basic operations </p>
+<script>
+    function chooseOp ()
+    {
+        console.log("Getting form values")
+        b1 = parseFloat(document.getElementById("b1").value)
+    tp = parseFloat(document.getElementById("tp").value)
+        out = document.getElementById("aop")
+        if(document.getElementById("sum").checked){
+          out.innerHTML="Sum of "+b1+" and"+tp+" is "+(b1+tp)
+        }
+        else if(document.getElementById("diff").checked){
+          out.innerHTML="diff of "+b1+" and"+tp+" is "+(b1-tp)
+        }
+      
+        else if(document.getElementById("mult").checked){
+            out.innerHTML="product of "+b1+" and"+tp+" is "+(b1*tp)
+        }
+    }
+</script>
 </body>
 </html> 
